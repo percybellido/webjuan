@@ -16,7 +16,9 @@ INSTALLED_APPS = [
 
     #local Apps
     'applications.core',
+    'applications.clientes',
     'applications.productos',
+    'applications.ventas',
 ]
 
 MIDDLEWARE = [
