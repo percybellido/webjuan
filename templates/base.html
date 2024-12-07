@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio | La Caffettiera</title>
+    <title>Inicio | Agrinsa</title>
 
     {% load static %}
 
@@ -27,9 +27,9 @@
 
   <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">El mejor aceite del Peru</span>
-      <span class="site-heading-lower">Agrinsa</span>
+    <h1 class="site-heading text-center text-white d-none d-lg-block mb-4 mt-4">
+      <span class="site-heading-upper color-texto mb-3 degradado">El mejor aceite del Peru</span>
+      <span class="site-heading-lower color-texto degradado">Agrinsa</span>
     </h1>
 
     <!-- Navegación -->
@@ -39,28 +39,31 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse menu-agrinsa" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item px-lg-4 {% if request.path == '/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'home' %}">Inicio</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/about/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'about' %}">Historia</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/productos/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'productos' %}">Productos</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'productos' %}">Productos</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/clientes/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes' %}">Clientes</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'clientes' %}">Clientes</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/ventas/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'ventas' %}">Ventas</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'ventas' %}">Ventas</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/contacto/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'contacto' %}">Contacto</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'contacto' %}">Contacto</a>
             </li>
             <li class="nav-item px-lg-4 {% if request.path == '/blog/' %}active{% endif %}">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'blog' %}">Blog</a>
+            </li>
+            <li class="nav-item px-lg-4 {% if request.path == '/admin/' %}active{% endif %}">
+              <a class="nav-link text-uppercase text-expanded text-agrinsa" href="{% url 'admin:index' %}">Admin</a>
             </li>
           </ul>
         </div>
@@ -73,32 +76,42 @@
     
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
-      <div class="container">
+      <div class="container footer-agrinsa">
+        
         <p class="m-0">
-	        <a href="#" class="link">
+          {% if LINK_TWITTER %}
+	        <a href="{{LINK_TWITTER}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
-	        <a href="#" class="link">
+          {% endif %}
+
+          {% if LINK_FACEBOOK %}
+	        <a href="{{LINK_FACEBOOK}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
-	        <a href="#" class="link">
+          {% endif %}
+
+          {% if LINK_INSTAGRAM %}
+	        <a href="{{LINK_INSTAGRAM}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
-	    </p>
-        <p class="m-0 mbt">
+          {% endif %}
+
+	      </p>
+        <p class="m-0 mbt politica">
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
-		</p>
+		    </p>
         <p class="m-0 mbt1">&copy; Agrinsa 2024</p>
       </div>
 	</footer>
