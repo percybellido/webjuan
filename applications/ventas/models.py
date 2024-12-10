@@ -51,4 +51,4 @@ class Ventas_MP(models.Model):
         ordering=['-VentasMP_Ventas_Id']
 
     def __str__(self):
-        return str((self.VentasMP_Ventas_Id))+'--'+str(self.VentasMP_Total)+'--'+'--'+self.VentasMP_MP_Id+str(self.VentasMP_Fecha)
+        return str((self.VentasMP_Ventas_Id))+'--'+str(self.VentasMP_Total)+'--'+'--'+str(self.VentasMP_MP_Id)+str(self.VentasMP_Fecha)

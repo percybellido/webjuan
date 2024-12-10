@@ -279,11 +279,11 @@ p {
   background-color: #656d6d;
 }
 @media (max-width:400px){
-  .fuente {font-size: 12px;
+  .fuente {font-size: 14px;
   }
 }
 @media (max-width:400px){
-  .fuente1 {font-size: 13px;
+  .fuente1 {font-size: 14px;
   }
 }
 .address strong {
@@ -413,8 +413,19 @@ ul.errorlist{
 
 .color-fuente{
   color:rgba(19, 47, 15, 0.9);
+  font-weight: bold;
 }
 
 .contacto{
   color:#df902a;
+}
+
+@media (max-width:380px){
+  span .section-heading-lower {
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #df902a;
+  }
 }
